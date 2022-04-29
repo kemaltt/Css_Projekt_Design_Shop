@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700;800&display=swap');
+
+/* 
+Font: font-family: 'Karla', sans-serif;
+Farbe: #323A45 / #848484 
+*/
+
+
+/* =================================
+           General Styling
+===================================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =================================
+           Header Styling
+===================================*/
+
+header {
+    padding: 4vh 6%;
+}
+
+header nav {
+    /* display: grid;
+    grid-template: 1fr/2fr 1fr; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+header nav h1 {
+    font-size: 1.8rem;
+}
+
+header nav h1:hover,
+header nav a:hover,
+section img:hover {
+    opacity: 0.3;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+header nav ul {
+    list-style: none;
+    display: grid;
+    grid-template: 1fr/2fr 1fr 1fr;
+    place-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #323A45;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav div:nth-of-type(1) {
+    display: block;
+}
+
+header nav div:nth-of-type(2) {
+    visibility: hidden;
+    display: none;
+}
+
+header nav div span {
+    display: block;
+    background-color: #323A45;
+    width: 50px;
+    height: 7px;
+    margin: 3px 0;
+    border-radius: 10px;
+}
+
+header nav div:nth-of-type(3) {
+    display: none;
+}
+
+
+/* =================================
+      Main Styling
+===================================*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 2vh 7%;
+}
+
+.hero-section {
+    grid-column: 1/4;
+}
+
+section img {
+    width: 100%;
+}
+
+section .unter-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unter-title p:nth-of-type(1),
+.unter-title span {
+    font-size: 1.5rem;
+    color: #323A45;
+    font-weight: 500;
+    margin-top: 1vh;
+}
+
+.unter-title p:nth-of-type(2) {
+    color: #848484;
+    font-size: 1.5rem;
+    margin-top: 1vh;
+}
+
+
+/* =================================
+   Footer Styling
+===================================*/
+
+footer {
+    padding: 4vh 7% 2vh 7%;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+    padding: 7vh 0 7vh 0;
+}
+
+footer h3 {
+    font-size: 1.7rem;
+    margin-bottom: 5vh;
+}
+
+footer p {
+    font-size: 1.5rem;
+    margin: 1vh 0;
+}
+
+footer div:nth-of-type(1) span {
+    font-weight: 700;
+}
+
+footer div:nth-of-type(3) span {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+footer div:nth-of-type(3) a {
+    font-weight: 700;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 1vh;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #323A45;
+}
+
+footer a:hover {
+    font-weight: 700;
+}
+
+
+/* =================================
+            Media Query
+===================================*/
+
+@media only screen and (max-width: 400px) {
+    header nav {
+        position: fixed;
+        top: 0;
+        display: flex;
+        width: 90%;
+        padding-top: 2vh;
+    }
+    header nav div:nth-of-type(1) {
+        display: none;
+    }
+    header nav div:nth-of-type(2) {
+        visibility: visible;
+        display: block;
+    }
+    header nav div:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-top: 1vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2vh 3%;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        left: 100%;
+        border-radius: 20px;
+        transition: all 0.4s linear;
+        cursor: pointer;
+        visibility: hidden;
+    }
+    header nav div:nth-of-type(3) p {
+        font-size: 3rem;
+        font-weight: 900;
+        padding-bottom: 4vh;
+        color: #fff;
+    }
+    header nav div:nth-of-type(3) ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 40px;
+    }
+    header nav div:nth-of-type(3) a {
+        color: #fff;
+        font-size: 2rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        gap: 20px;
+    }
+    .hero-section {
+        grid-column: 1/4;
+    }
+    section {
+        grid-column: 1/4;
+    }
+    footer section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer h3 {
+        margin-bottom: 2vh;
+    }
+    footer div {
+        margin-bottom: 5vh;
+    }
+}

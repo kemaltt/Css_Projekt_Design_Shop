@@ -19,6 +19,7 @@ Farbe: #323A45 / #848484
 html {
     font-size: 62.5%;
     font-family: 'Karla', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -140,8 +141,11 @@ footer {
 }
 
 footer section {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template: repeat(1, 1fr) /repeat(4, 1fr);
+    place-items: center;
+    /* display: flex;
+    justify-content: space-around; */
     padding: 7vh 0 7vh 0;
 }
 
@@ -202,6 +206,7 @@ footer a:hover {
     header nav div:nth-of-type(2) {
         visibility: visible;
         display: block;
+        cursor: pointer;
     }
     header nav div:nth-of-type(3) {
         display: flex;
@@ -247,9 +252,12 @@ footer a:hover {
         grid-column: 1/4;
     }
     footer section {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center; */
+        display: grid;
+        grid-template: repeat(4, 1fr)/1fr;
+        place-items: start;
     }
     footer h3 {
         margin-bottom: 2vh;

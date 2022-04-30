@@ -4,10 +4,11 @@ const mobilNav = document.getElementById('mobil-nav')
 
 const showNav = () => {
 
-    mobilNav.style.display = 'none'
+    // mobilNav.style.display = 'none'
     sideNav.style.visibility = 'visible'
     sideNav.style.right = 0
     sideNav.style.left = 0
+
 }
 const closeNav = () => {
 

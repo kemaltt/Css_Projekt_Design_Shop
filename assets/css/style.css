@@ -31,16 +31,13 @@ body {
            Header Styling
 ===================================*/
 
-header {
-    padding: 4vh 6%;
-}
-
 header nav {
     /* display: grid;
     grid-template: 1fr/2fr 1fr; */
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    padding: 4vh 6%;
 }
 
 header nav h1 {
@@ -193,12 +190,18 @@ footer a:hover {
 ===================================*/
 
 @media only screen and (max-width: 450px) {
+    header {
+        margin-bottom: 8vh;
+    }
     header nav {
         position: fixed;
         top: 0;
         display: flex;
         width: 90%;
         padding-top: 2vh;
+        background-color: #fff;
+        padding: 2vh 2% 1vh 2%;
+        width: 100%;
     }
     header nav div:nth-of-type(1) {
         display: none;
@@ -216,13 +219,17 @@ footer a:hover {
         background-color: rgba(0, 0, 0, 0.6);
         padding: 2vh 3%;
         position: absolute;
-        top: 0;
+        top: 50px;
         right: -100%;
         left: 100%;
         border-radius: 20px;
         transition: all 0.4s linear;
         cursor: pointer;
-        visibility: hidden;
+        /* visibility: hidden; */
+    }
+    header nav div:nth-of-type(3) .toggle {
+        left: 0;
+        right: 0;
     }
     header nav div:nth-of-type(3) p {
         font-size: 3rem;

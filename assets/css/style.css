@@ -49,6 +49,7 @@ header nav a:hover,
 section img:hover {
     opacity: 0.3;
     cursor: pointer;
+    /* border-bottom: #323A45 2px solid; */
     transition: ease 0.5s;
 }
 
@@ -178,10 +179,11 @@ footer a {
     text-decoration: none;
     font-size: 1.5rem;
     color: #323A45;
+    font-weight: 700;
 }
 
 footer a:hover {
-    font-weight: 700;
+    color: black;
 }
 
 
@@ -210,26 +212,6 @@ footer a:hover {
         visibility: visible;
         display: block;
         cursor: pointer;
-    }
-    header nav div:nth-of-type(3) {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        margin-top: 1vh;
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 2vh 3%;
-        position: absolute;
-        top: 50px;
-        right: -100%;
-        left: 100%;
-        border-radius: 20px;
-        transition: all 0.4s linear;
-        cursor: pointer;
-        /* visibility: hidden; */
-    }
-    header nav div:nth-of-type(3) .toggle {
-        left: 0;
-        right: 0;
     }
     header nav div:nth-of-type(3) p {
         font-size: 3rem;

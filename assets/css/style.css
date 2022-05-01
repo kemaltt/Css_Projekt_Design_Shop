@@ -157,17 +157,14 @@ footer p {
     margin: 1vh 0;
 }
 
-footer div:nth-of-type(1) span {
+footer div:nth-of-type(1) span,
+footer div:nth-of-type(3) a {
     font-weight: 700;
 }
 
 footer div:nth-of-type(3) span {
     font-size: 1.5rem;
     font-style: italic;
-}
-
-footer div:nth-of-type(3) a {
-    font-weight: 700;
 }
 
 footer ul li {
@@ -200,7 +197,6 @@ footer a:hover {
         top: 0;
         display: flex;
         width: 90%;
-        padding-top: 2vh;
         background-color: #fff;
         padding: 2vh 2% 1vh 2%;
         width: 100%;
